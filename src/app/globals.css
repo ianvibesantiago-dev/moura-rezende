@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+/* Tokens — espelham a coleção "Color" do Figma (Moura & Rezende — Foundations) */
+@theme {
+  --color-paper: #f6f3ec; /* bg/canvas */
+  --color-surface: #ffffff;
+  --color-forest: #16302a; /* bg/brand */
+  --color-forest-deep: #0e211c; /* bg/brand-deep */
+  --color-gold: #b08d57; /* bg/accent */
+  --color-gold-ink: #8c6b3a; /* text/accent */
+  --color-muted: #ece6da;
+  --color-ink: #1c1f1d;
+  --color-ink-soft: #5e625d;
+  --color-line: #ddd6c8;
+
+  --font-serif: var(--font-caslon), Georgia, serif;
+  --font-sans: var(--font-manrope), system-ui, sans-serif;
+
+  --ease-classic: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@utility container-page {
+  @apply mx-auto w-full max-w-[1440px] px-6 md:px-12 lg:px-24;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+  }
+  :focus-visible {
+    @apply outline-1 outline-offset-4 outline-gold;
+  }
+  ::selection {
+    @apply bg-forest text-paper;
+  }
+}
+
+@layer components {
+  .overline {
+    @apply text-xs font-bold tracking-[0.25em] uppercase;
+  }
+  .label {
+    @apply text-sm font-bold tracking-[0.08em] uppercase;
+  }
+  .display-xl {
+    @apply font-serif text-[clamp(2.75rem,6.5vw,5.5rem)] leading-[1.02] tracking-[-0.03em];
+  }
+  .display-l {
+    @apply font-serif text-[clamp(2.25rem,4vw,3.5rem)] leading-[1.08] tracking-[-0.025em];
+  }
+  .display-m {
+    @apply font-serif text-[clamp(1.5rem,2.2vw,2rem)] leading-[1.2] tracking-[-0.01em];
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
