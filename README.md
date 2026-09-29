@@ -2,7 +2,7 @@
 
 > Site sóbrio e editorial para escritório boutique de advocacia, com formulário de contato acessível.
 
-**🔗 Demo:** _em breve_ · **Nicho:** Jurídico · Advocacia empresarial
+**🔗 Demo:** [moura-rezende.vercel.app](https://moura-rezende.vercel.app) · **Nicho:** Jurídico · Advocacia empresarial
 
 > ⚠️ Projeto **conceitual de portfólio**. Empresa, pessoas, endereços e números são fictícios.
 
